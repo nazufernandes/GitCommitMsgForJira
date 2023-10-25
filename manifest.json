@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+    "name": "Jira Commit Message",
+    "description": "Generate Commit Message for Git from jira ticket",
+    "version": "0.0.1",
+    "permissions" : ["tabs","clipboard-write"],
+    "browser_action": {
+      "default_icon": "logo.png",
+      "default_popup": "popup.html",
+      "default_title": "Click here!"
+    },
+    "content_scripts": [
+    {
+      "matches": ["https://tetherfi-pte-ltd.atlassian.net/browse/*"],
+      "js": ["content.js"]
+    }],
+    "icons": {
+        "128": "logo.png"
+    }
+  }
